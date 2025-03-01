@@ -1,5 +1,10 @@
 import "./App.css";
-import { CourseSection, EducationSection, Hero } from "./components/Landing";
+import {
+  CourseSection,
+  EducationSection,
+  FAQSection,
+  Hero,
+} from "./components/Landing";
 
 function App() {
   return (
@@ -7,6 +12,7 @@ function App() {
       <Hero />
       <EducationSection />
       <CourseSection />
+      <FAQSection />
     </>
   );
 }

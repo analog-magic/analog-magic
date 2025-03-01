@@ -1,0 +1,44 @@
+.item {
+  border: 1px solid white !important;
+  border-bottom: 0;
+  color: white !important;
+  border-radius: var(--mantine-radius-md);
+}
+
+.control {
+  font-size: var(--mantine-font-size-lg);
+  padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
+  color: white !important;
+
+  @mixin hover {
+    background-color: transparent;
+  }
+}
+
+.content {
+  padding-left: var(--mantine-spacing-xl);
+  line-height: 1.6;
+  color: transparent !important;
+}
+
+.icon {
+  margin-left: var(--mantine-spacing-md);
+}
+
+.itemOpened {
+  & .icon {
+    transform: rotate(45deg);
+  }
+}
+.faqHeader {
+  color: white !important;
+}
+
+.button {
+  display: block;
+  margin-top: var(--mantine-spacing-md);
+  @media (max-width: $mantine-breakpoint-sm) {
+    display: block;
+    width: 100%;
+  }
+}
