@@ -12,7 +12,9 @@ import {
   Image,
   useMantineTheme,
 } from "@mantine/core";
+
 import classes from "./Footer.module.css";
+
 import { linksFooter } from "../../constants/LinksFooter";
 
 const Footer = () => {
@@ -25,7 +27,6 @@ const Footer = () => {
       href={link.href}
       lh={6}
       onClick={(event) => event.preventDefault()}
-      size="l"
       h={100}
     >
       {link.title}

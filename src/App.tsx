@@ -4,6 +4,7 @@ import {
   EducationSection,
   FAQSection,
   Hero,
+  TestimonialSection,
 } from "./components/Landing";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <EducationSection />
       <CourseSection />
       <FAQSection />
+      <TestimonialSection />
     </>
   );
 }
