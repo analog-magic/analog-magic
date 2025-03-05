@@ -1,6 +1,6 @@
 import { Accordion } from "@mantine/core";
 import classes from "./FAQSection.module.css";
-export type FAQItemProps = {
+type FAQItemProps = {
   question: string;
   answer: string;
   value: string;

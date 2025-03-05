@@ -1,10 +1,7 @@
 import { GiPhotoCamera } from "react-icons/gi";
 import { BsCamera } from "react-icons/bs";
-import { FAQItemProps } from "@/components/Landing/FAQSection/FAQItem";
 
-export type FAQQuestions = FAQItemProps[];
-
-export const faqQuestions: FAQQuestions = [
+export const faqQuestions = [
   {
     question: "Why should I shoot on film instead of digital?",
     value: "film-instead-of-digital",
