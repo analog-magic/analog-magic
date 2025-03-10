@@ -25,7 +25,7 @@ const TestimonialSection = () => {
         withControls={true}
       >
         {testimonials.map((t) => (
-          <TestimonialSlide {...t} />
+          <TestimonialSlide key={t.review} {...t} />
         ))}
       </Carousel>
     </SectionWrapper>
