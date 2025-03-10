@@ -64,7 +64,7 @@ const CourseCarousel = () => {
       onMouseLeave={autoplay.current.reset}
     >
       {photoCoursesInfo.map((course) => (
-        <Carousel.Slide>
+        <Carousel.Slide key={course.courseName}>
           <CourseCard
             courseName={course.courseName}
             courseNumber={course.courseNumber}
