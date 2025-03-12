@@ -41,6 +41,7 @@ const Footer = () => {
             className={classes.invert}
             src="/images/logo/logo2.png"
             h={100}
+            alt="logo"
             w={200}
             mb={10}
           />

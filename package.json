@@ -15,7 +15,6 @@
     "@mantine/hooks": "^7.16.2",
     "@mantinex/mantine-logo": "^1.1.0",
     "@tabler/icons-react": "^3.29.0",
-    "@testing-library/react": "^16.2.0",
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.3.4",
     "babel-jest": "^29.7.0",
@@ -31,7 +30,10 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui"
   },
   "eslintConfig": {
     "extends": [
@@ -53,11 +55,14 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
     "@types/css-modules": "^1.0.5",
     "@types/jest": "^29.5.14",
+    "@vitest/ui": "^3.0.8",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "prettier": "^3.4.2",
-    "vite": "^6.2.1"
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8"
   }
 }
