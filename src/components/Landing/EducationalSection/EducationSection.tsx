@@ -4,7 +4,7 @@ import classes from "./EducationalSection.module.css";
 import { EducationImage } from "./EducationalImage";
 import { EducationContent } from "./EducationalContent";
 import { EducationStats } from "./EducationalStats";
-import SectionWrapper from "../../Shared/SectionWrapper";
+import SectionWrapper from "../../shared/SectionWrapper";
 export default function EducationSection() {
   return (
     <SectionWrapper
