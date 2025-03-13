@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
 import { testimonials } from "../../../data/testimonials";
-import SectionWrapper from "../../Shared/SectionWrapper";
+import SectionWrapper from "../../shared/SectionWrapper";
 import TestimonialSlide from "./TestimonialSlide";
 const TestimonialSection = () => {
   const autoplay = useRef(Autoplay({ delay: 2000 }));

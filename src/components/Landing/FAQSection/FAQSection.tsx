@@ -1,4 +1,4 @@
-import SectionWrapper from "../../Shared/SectionWrapper";
+import SectionWrapper from "../../shared/SectionWrapper";
 import FAQQuestions from "./FAQQuestions";
 
 const FAQSection = () => {
