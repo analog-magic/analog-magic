@@ -13,7 +13,6 @@ const TestimonialSlide = ({ avatar, name, review }: TestimonialSlideProps) => {
       sx={{
         display: "flex",
         justifyContent: "center !important",
-        maxHeight: "160px !important",
       }}
     >
       <Card
@@ -24,7 +23,7 @@ const TestimonialSlide = ({ avatar, name, review }: TestimonialSlideProps) => {
         bg="transparent"
         w="fit-content"
         styles={{
-          root: { borderColor: "#f8a500" },
+          root: { borderColor: "white", height: "200px" },
         }}
       >
         <Group w={300} justify="start" align="center" gap="xs">

@@ -6,8 +6,7 @@ import { testimonials } from "../../../data/testimonials";
 import SectionWrapper from "../../Shared/SectionWrapper";
 import TestimonialSlide from "./TestimonialSlide";
 const TestimonialSection = () => {
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
-
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
   return (
     <SectionWrapper
       sectionTitle="Testimonials"
@@ -17,12 +16,12 @@ const TestimonialSection = () => {
       <Carousel
         height={220}
         type="container"
-        slideSize={{ base: "100%", "300px": "50%", "500px": "20%" }}
+        slideSize={{ base: "70%", "300px": "80%", "500px": "20%" }}
         slideGap={{ base: 0, "300px": "md", "500px": "lg" }}
         loop
         align="start"
         plugins={[autoplay.current]}
-        withControls={true}
+        withControls={false}
       >
         {testimonials.map((t) => (
           <TestimonialSlide key={t.review} {...t} />

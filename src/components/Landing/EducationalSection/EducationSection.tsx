@@ -5,6 +5,10 @@ import { EducationImage } from "./EducationalImage";
 import { EducationContent } from "./EducationalContent";
 import { EducationStats } from "./EducationalStats";
 import SectionWrapper from "../../Shared/SectionWrapper";
+
+import photo7 from "../../../assets/images/hero/photo7.jpg";
+import photo8 from "../../../assets/images/hero/photo8.jpg";
+import photo9 from "../../../assets/images/hero/photo9.jpg";
 export default function EducationSection() {
   return (
     <SectionWrapper
@@ -20,10 +24,7 @@ export default function EducationSection() {
               wrap="wrap"
               direction={{ base: "column", md: "row" }}
             >
-              <EducationImage
-                imageSrc="/images/hero/photo7.jpg"
-                hoverImageSrc="/images/hero/photo8.jpg"
-              />
+              <EducationImage imageSrc={photo7} hoverImageSrc={photo8} />
               <EducationContent />
             </Flex>
 
@@ -40,7 +41,7 @@ export default function EducationSection() {
         >
           <Box p="md" h="100%">
             <Center>
-              <Image src="/images/hero/photo9.jpg" h={600} />
+              <Image src={photo9} h={600} />
             </Center>
           </Box>
         </Grid.Col>
