@@ -10,29 +10,34 @@ import {
 } from "@mantine/core";
 import styles from "./Hero.module.css";
 
+import photo1 from "../../../assets/images/hero/photo1.jpg";
+import photo2 from "../../../assets/images/hero/photo2.jpg";
+import photo3 from "../../../assets/images/hero/photo3.jpg";
+import photo4 from "../../../assets/images/hero/photo4.jpg";
+import photo5 from "../../../assets/images/hero/photo5.jpg";
 const images = [
   {
-    src: "/images/hero/photo1.jpg",
+    src: photo1,
     title: "The life moments",
     text: "Learn the art of analog photography",
   },
   {
-    src: "/images/hero/photo2.jpg",
+    src: photo2,
     title: "Timeless Shots",
     text: "Discover the beauty of film photography",
   },
   {
-    src: "/images/hero/photo3.jpg",
+    src: photo3,
     title: "Retro Elegance",
     text: "Master manual settings and composition",
   },
   {
-    src: "/images/hero/photo4.jpg",
+    src: photo4,
     title: "Unique Aesthetics",
     text: "Create unique images with real grain",
   },
   {
-    src: "/images/hero/photo6.jpg",
+    src: photo5,
     title: "Keep Memories",
     text: "Every photo tells a story",
   },

@@ -10,6 +10,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Navbar.module.css";
 import { links } from "../../constants/Links";
+import logo from "../../assets/images/logo/logo1White.png";
 
 const Navbar = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
@@ -19,12 +20,7 @@ const Navbar = () => {
     <Box pb={0}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%" mx={40}>
-          <Image
-            src="/images/logo/logo1White.png"
-            alt="Logo"
-            width={40}
-            height={60}
-          />
+          <Image src={logo} alt="Logo" width={40} height={60} />
           <Group h="100%" gap={10} visibleFrom="sm" align="right">
             {links.map((link) => (
               <a

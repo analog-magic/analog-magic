@@ -14,6 +14,7 @@ import {
 } from "@mantine/core";
 
 import classes from "./Footer.module.css";
+import logo from "../../assets/images/logo/logo2.png";
 
 import { linksFooter } from "../../constants/LinksFooter";
 
@@ -39,7 +40,7 @@ const Footer = () => {
         <Box className={classes.inner}>
           <Image
             className={classes.invert}
-            src="/images/logo/logo2.png"
+            src={logo}
             h={100}
             w={200}
             mb={10}
