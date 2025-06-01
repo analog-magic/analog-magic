@@ -1,14 +1,5 @@
-import { useState, useEffect } from "react";
-import {
-  Container,
-  Title,
-  useMantineTheme,
-  BackgroundImage,
-  Image,
-  Box,
-  Button,
-} from "@mantine/core";
-import styles from "./Hero.module.css";
+import { Image, Box } from "@mantine/core";
+import { Carousel } from "@mantine/carousel";
 
 const images = [
   {
@@ -39,90 +30,22 @@ const images = [
 ];
 
 export default function Hero() {
-  const theme = useMantineTheme();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [fade, setFade] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(false);
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setFade(true);
-      }, 300);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const handlePrev = () => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrentIndex(
-        (prevIndex) => (prevIndex - 1 + images.length) % images.length,
-      );
-      setFade(true);
-    }, 300);
-  };
-
-  const handleNext = () => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      setFade(true);
-    }, 300);
-  };
-
   return (
-    <Box className={styles.hero}>
-      <Box className={styles.controls}>
-        <Button className={styles.controlButton} onClick={handlePrev}>
-          ◀
-        </Button>
-        <Button className={styles.controlButton} onClick={handleNext}>
-          ▶
-        </Button>
-      </Box>
-
-      <Box className={styles.imageWrapper}>
+    <Box h="90vh" display="flex">
+      <Carousel withIndicators height="100%" loop>
         {images.map((image, index) => (
-          <BackgroundImage
-            key={index}
-            src={image.src}
-            className={styles.image}
-            style={{ opacity: index === currentIndex ? 1 : 0 }}
-            radius={theme.radius.lg}
-          />
+          <Carousel.Slide key={index}>
+            <Image
+              src={image.src}
+              alt={`Slide ${index}`}
+              w="100%"
+              h="100%"
+              radius="lg"
+              fit="cover"
+            />
+          </Carousel.Slide>
         ))}
-      </Box>
-
-      <Container>
-        <Box
-          className={styles.content}
-          sx={{
-            opacity: fade ? 1 : 0,
-            transition: "opacity 0.5s ease-in-out",
-          }}
-        >
-          <Box>
-            <Title size={200} className={styles.outlinedText}>
-              ANAL
-            </Title>
-          </Box>
-          <Title size={80} order={1}>
-            {images[currentIndex].title}
-          </Title>
-        </Box>
-      </Container>
-
-      <Image
-        src="https://demo.bravisthemes.com/kimono/wp-content/themes/kimono/assets/img/layer-2.png"
-        bottom={0}
-        right={0}
-        pos="absolute"
-        className={styles.floatingImage}
-        w={900}
-      />
+      </Carousel>
     </Box>
   );
 }

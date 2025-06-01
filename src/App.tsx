@@ -1,21 +1,17 @@
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout/Layout";
+import Contact from "./pages/Contact";
 import "./App.css";
-import {
-  CourseSection,
-  EducationSection,
-  FAQSection,
-  Hero,
-  TestimonialSection,
-} from "./components/Landing";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <Hero />
-      <EducationSection />
-      <CourseSection />
-      <FAQSection />
-      <TestimonialSection />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
 }
 

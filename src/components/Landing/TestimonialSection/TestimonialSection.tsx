@@ -20,7 +20,7 @@ const TestimonialSection = () => {
         slideSize={{ base: "100%", "300px": "50%", "500px": "20%" }}
         slideGap={{ base: 0, "300px": "md", "500px": "lg" }}
         loop
-        align="start"
+        align="center"
         plugins={[autoplay.current]}
         withControls={true}
       >

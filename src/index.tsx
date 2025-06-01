@@ -5,8 +5,8 @@ import "@mantine/carousel/styles.css";
 
 import App from "./App";
 import { MantineProvider } from "@mantine/core";
-import { Footer, Navbar } from "./components/global";
 import { MantineEmotionProvider } from "@mantine/emotion";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -14,12 +14,12 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <MantineProvider>
-      <MantineEmotionProvider>
-        <Navbar />
-        <App />
-        <Footer />
-      </MantineEmotionProvider>
-    </MantineProvider>
+    <BrowserRouter>
+      <MantineProvider>
+        <MantineEmotionProvider>
+          <App />
+        </MantineEmotionProvider>
+      </MantineProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 );

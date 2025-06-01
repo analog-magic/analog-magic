@@ -15,15 +15,19 @@ import {
 
 import classes from "./Footer.module.css";
 
-import { linksFooter } from "../../constants/LinksFooter";
-
 const Footer = () => {
   const theme = useMantineTheme();
 
-  const items = linksFooter.map((link) => (
+  const links = [
+    { title: "Courses", href: "/courses" },
+    { title: "Teachers", href: "/teachers" },
+    { title: "Contact", href: "/contact" },
+  ];
+
+  const items = links.map((link, index) => (
     <Anchor
       c="white"
-      key={link.title}
+      key={index}
       href={link.href}
       lh={6}
       onClick={(event) => event.preventDefault()}
